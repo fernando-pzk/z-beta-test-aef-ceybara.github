@@ -1,63 +1,66 @@
-body{
+body {
     font-family: Bahnschrift, sans-serif;
     height: 100%;
+    margin: 0;
+    overflow-x: hidden;
 }
+
+/* Estilos generales */
 .waves-container {
-        position: absolute;
-        top: 780px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        pointer-events: none;
-        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
-      }
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.8));
+}
 
-      .wave {
-        position: absolute;
-        width: 100%;
-        height: 60px;
-        background-color: rgba(0, 0, 255, 0.2);
-        bottom: 0;
-        animation: waveAnimation 6s linear infinite;
-      }
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(0, 0, 255, 0.2);
+    bottom: 0;
+    animation: waveAnimation 6s linear infinite;
+}
 
-      @keyframes waveAnimation {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-15px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
+@keyframes waveAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
 
+/* Media query para pantallas más pequeñas */
 @media screen and (max-width: 700px) {
-    
-.waves-container {
-    width: 500px;
+    .waves-container {
         top: 1400px;
     }
 }
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semi-transparente */
-    display: none; /* Inicialmente oculto */
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
     justify-content: center;
     align-items: center;
-    z-index: 999; /* Coloca la capa por encima de todo */
+    z-index: 999;
 }
 
 .start-message {
     font-size: 24px;
     color: white;
-    background-color: darkslategrey; /* Color de fondo */
+    background-color: darkslategrey;
     padding: 20px;
     border-radius: 5px;
     transition: 0.5s;
@@ -68,7 +71,8 @@ body{
     color: white;
     transition: 0.5s;
 }
-.bar-menu{
+
+.bar-menu {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -76,7 +80,7 @@ body{
     z-index: 1;
 }
 
-.img-logo-hov{
+.img-logo-hov {
     float: left;
     width: 50px;
 }
@@ -107,8 +111,9 @@ body{
 .option a:hover {
     transition: 0.5s;
     background-color: #d8d8d8;
-    
-}/* Estilos base para todas las pantallas */
+}
+
+/* Estilos base para todas las pantallas */
 .body-hov {
     position: absolute;
     top: 0px;
@@ -143,13 +148,14 @@ body{
     top: 270px;
     left: 140px;
 }
+
 .button-start:hover {
     background-color: #94ebeb;
     transition: 0.6s;
     z-index: 1;
 }
 
-.subtitle-hox-part-page-one{
+.subtitle-hox-part-page-one {
     padding: 14px;
     margin-left: 50px;
     margin-right: 50px;
@@ -158,12 +164,13 @@ body{
     border: 1px solid white;
     color: white;
     font-family: Calibri, serif;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     position: absolute;
     top: 470px;
     transition: 0.5s;
 }
-.subtitle-hox-part-page-one:hover{
+
+.subtitle-hox-part-page-one:hover {
     transition: 0.5s;
     transform: translateY(-10px);
     transform: translateX(10px);
@@ -180,62 +187,63 @@ body{
     background-image: url(http://drive.google.com/uc?export=view&id=1QsMuPKOTlt8gh2o8VR4TV6r9aS57brnQ);
     padding: 150px;
 }
+
 .img-src-hov-logo:hover {
     transition: 0.5s;
     filter: saturate(50%);
 }
 
+/* Media queries para ajustar el diseño en pantallas más pequeñas */
 @media screen and (max-width: 1100px) {
     .body-hov {
-        max-width: 100%; /* Hacer que el ancho sea del 100% en pantallas más pequeñas */
+        max-width: 100%;
     }
 
     .title-hov-part-1 {
-        top: 230px; /* Ajustar la posición del título */
+        top: 230px;
         left: 130px;
     }
 
     .button-start {
-        top: 270px; /* Ajustar la posición del botón */
+        top: 270px;
         left: 140px;
     }
 
     .img-src-hov-logo {
-        top: 200px; /* Ajustar la posición de la imagen */
+        top: 200px;
         left: 460px;
         height: 50px;
         padding: 50px;
     }
-    .subtitle-hox-part-page-one{
-        
+    .subtitle-hox-part-page-one {
+        /* Puedes ajustar los estilos aquí */
     }
 }
 
-
 @media screen and (max-width: 700px) {
     .body-hov {
-        max-width: 100%; /* Hacer que el ancho sea del 100% en pantallas más pequeñas */
+        max-width: 100%;
     }
 
     .title-hov-part-1 {
-        top: 230px; /* Ajustar la posición del título */
+        top: 230px;
         left: 30px;
     }
 
     .button-start {
-        top: 270px; /* Ajustar la posición del botón */
+        top: 270px;
         left: 40px;
     }
 
     .img-src-hov-logo {
-        top: 240px; /* Ajustar la posición de la imagen */
+        top: 240px;
         left: 290px;
         height: 50px;
         padding: 50px;
     }
 }
 
-
+/* Estilos del contenedor de información */
 .container {
     position: relative;
     top: 700px;
@@ -294,15 +302,16 @@ body{
         padding: 20px;
     }
 }
+
 /* Estilo del div independiente para los botones de trámites */
 .tramites-container {
     position: fixed;
     bottom: 0;
     right: 0;
-    background-color: #fff; /* Color de fondo para los botones */
+    background-color: #fff;
     padding: 20px;
-    z-index: 2; /* Asegura que esté por encima de otros elementos */
-    box-shadow: -3px 0px 5px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+    z-index: 2;
+    box-shadow: -3px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilo de los botones de trámites */
@@ -314,22 +323,22 @@ body{
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    color: #000; /* Cambia el color del texto */
+    color: #000;
 }
 
 /* Estilo de los botones de trámites - Fiscal */
 .btn-fiscal {
-    background-color: #007BFF; /* Color correspondiente a la paleta de colores */
+    background-color: #007BFF;
 }
 
 /* Estilo de los botones de trámites - Contable */
 .btn-contable {
-    background-color: #94ebeb; /* Color correspondiente a la paleta de colores */
+    background-color: #94ebeb;
 }
 
 /* Estilo de los botones de trámites - Corporativo */
 .btn-corporativo {
-    background-color: #ff9900; /* Color correspondiente a la paleta de colores */
+    background-color: #ff9900;
 }
 
 /* Hover para los botones de trámites */
@@ -337,6 +346,7 @@ body{
     background-color: #d8d8d8;
     transition: 0.3s;
 }
+
 /* Estilo del div independiente para los botones de trámites */
 .tramites-container {
     position: fixed;
@@ -346,7 +356,7 @@ body{
     padding: 20px;
     z-index: 2;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease; /* Agregamos una transición */
+    transition: transform 0.3s ease;
 }
 
 .subsection-title {
@@ -367,3 +377,7 @@ body{
 .tramites-container.large {
     transform: scale(1.7);
 }
+
+/* Otras reglas de estilo específicas para tu contenido */
+
+/* Agrega más estilos según sea necesario */
